@@ -2,7 +2,7 @@ import React from 'react';
 
 function Square(props) { //functional react component
     return (
-        <button className="square" onClick={props.onClick}>
+        <button className={props.isWinningSquare ? 'square winner' : 'square'} onClick={props.onClick}>
             {props.value}
         </button>
     );
