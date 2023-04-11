@@ -1,5 +1,6 @@
 import React from 'react';
 import Board from './Board';
+import MoveCounter from './MoveCounter';
 
 class Game extends React.Component {
     constructor(props) {
@@ -67,6 +68,9 @@ class Game extends React.Component {
                     <Board
                         squares={current.squares}
                         onClick={(i) => this.handleClick(i)}
+                    />
+                    <MoveCounter
+                        step={this.state.stepNumber}
                     />
                 </div>
                 <div className="game-info">
